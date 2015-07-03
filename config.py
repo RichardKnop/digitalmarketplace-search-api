@@ -18,6 +18,10 @@ class Config:
     DM_LOG_PATH = '/var/log/digitalmarketplace/application.log'
     DM_REQUEST_ID_HEADER = 'DM-Request-ID'
     DM_DOWNSTREAM_REQUEST_ID_HEADER = 'X-Amz-Cf-Id'
+    DM_ELASTICSEARCH_URL = 'http://{}:{}'.format(
+        os.environ.get('ELASTICSEARCH_HOST'),
+        os.environ.get('ELASTICSEARCH_PORT'),
+    )
 
     # Feature Flags
     RAISE_ERROR_ON_MISSING_FEATURES = True
