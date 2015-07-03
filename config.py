@@ -46,6 +46,7 @@ class Live(Config):
     ALLOW_EXPLORER = False
 
 
+os.environ["DM_ELASTICSEARCH_URL"] = Config.DM_ELASTICSEARCH_URL
 config = {
     'development': Development,
     'preview': Live,
